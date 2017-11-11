@@ -7,6 +7,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Atendente {
+<<<<<<< HEAD
 	@Id
 	private String idAtendente;
 	private String nome;
@@ -29,6 +30,10 @@ public class Atendente {
 	public String getNome() {
 		return nome;
 	}
+=======
+	
+	
+>>>>>>> e51d03fcd460a19767bae3bd8ab5084862b61b66
 
 	public String getCpf() {
 		return cpf;
