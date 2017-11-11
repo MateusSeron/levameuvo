@@ -1,11 +1,13 @@
 package br.levameuvo.Atendimento;
 
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import br.levameuvo.EndPoint.EndPoint;
 import br.levameuvo.Localizacao.Localizacao;
 
 @Entity
@@ -18,11 +20,22 @@ public class Atendimento {
 	private boolean aceito;
 	private Integer valor;
 	private Localizacao geolocalizacao;
+	private List<EndPoint> etapas;
 	
 	public Atendimento() {
 		this.idAtendimento = UUID.randomUUID().toString();
 	}
-
+	
+	public Atendimento(Date horario, Date data, boolean aceito, Integer valor, Localizacao geo, List<EndPoint> etapas){
+		this();
+		this.horario = horario;
+		this.data = data;
+		this.aceito = aceito;
+		this.valor = valor;
+		this.geolocalizacao = geo;
+		this.etapas = etapas;
+	}
+	
 	public String getIdAtendimento() {
 		return idAtendimento;
 	}
@@ -45,6 +58,10 @@ public class Atendimento {
 
 	public Localizacao getGeolocalizacao() {
 		return geolocalizacao;
+	}
+	
+	public List<EndPoint> getEtapas(){
+		return this.etapas;
 	}
 	
 	
