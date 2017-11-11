@@ -1,18 +1,16 @@
 package br.levameuvo.Usuario;
 
-<<<<<<< HEAD
-import javax.persistence.Entity;
-=======
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 import br.levameuvo.Atendimento.Atendimento;
-
->>>>>>> e51d03fcd460a19767bae3bd8ab5084862b61b66
 
 @Entity
 public class Usuario {
@@ -20,6 +18,8 @@ public class Usuario {
 	@Id
 	private String idUsuario;
 	private String nome;
+	@OneToMany
+	@JoinColumn
 	private List<Atendimento> agendamentos = new ArrayList<Atendimento>();
 	
 	

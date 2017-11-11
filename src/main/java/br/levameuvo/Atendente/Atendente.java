@@ -1,15 +1,24 @@
 package br.levameuvo.Atendente;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+
+import br.levameuvo.Atendimento.Atendimento;
 
 @Entity
 public class Atendente {
-<<<<<<< HEAD
+
 	@Id
 	private String idAtendente;
+	@OneToMany
+	@JoinColumn
+	private List<Atendimento> atendimentos = new ArrayList<Atendimento>();
 	private String nome;
 	private String cpf;
 	
@@ -30,12 +39,14 @@ public class Atendente {
 	public String getNome() {
 		return nome;
 	}
-=======
-	
-	
->>>>>>> e51d03fcd460a19767bae3bd8ab5084862b61b66
+
 
 	public String getCpf() {
 		return cpf;
 	}
+
+	public List<Atendimento> getAtendimentos() {
+		return atendimentos;
+	}
+
 }

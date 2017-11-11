@@ -1,16 +1,10 @@
 package br.levameuvo.Localizacao;
 
-<<<<<<< HEAD
-import javax.persistence.Entity;
 
-@Entity
-public class Localizacao {
-=======
 import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
->>>>>>> e51d03fcd460a19767bae3bd8ab5084862b61b66
 
 @Entity
 public class Localizacao {

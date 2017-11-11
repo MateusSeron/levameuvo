@@ -1,6 +1,5 @@
 package br.levameuvo.EndPoint;
 
-import java.util.List;
 import java.util.UUID;
 
 import javax.persistence.Entity;
@@ -13,13 +12,14 @@ public class EndPoint {
 	private String idEndPoint;
 	private String etapa;
 	private boolean concluido;
-	private List<Byte> foto;
+	private String foto;
+	
 	
 	public EndPoint() {
 		this.idEndPoint = UUID.randomUUID().toString();
 	}
 	
-	public EndPoint(String etapa, boolean concluido, List<Byte> foto){
+	public EndPoint(String etapa, boolean concluido, String foto){
 		this();
 		this.etapa = etapa;
 		this.concluido = concluido;
@@ -38,7 +38,7 @@ public class EndPoint {
 		return concluido;
 	}
 
-	public List<Byte> getFoto() {
+	public String getFoto() {
 		return foto;
 	}
 	
