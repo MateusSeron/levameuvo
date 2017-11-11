@@ -14,7 +14,6 @@ public class EndPoint {
 	private boolean concluido;
 	private String foto;
 	
-	
 	public EndPoint() {
 		this.idEndPoint = UUID.randomUUID().toString();
 	}

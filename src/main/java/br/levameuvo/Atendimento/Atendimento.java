@@ -1,4 +1,4 @@
-package br.levameuvo.Atendimento;
+	package br.levameuvo.Atendimento;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -14,15 +14,19 @@ import javax.persistence.OneToMany;
 import br.levameuvo.EndPoint.EndPoint;
 import br.levameuvo.Localizacao.Localizacao;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
 public class Atendimento {
 	
 	@Id
 	private String idAtendimento;
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy", locale = "pt-BR", timezone = "Brazil/East")
 	private Date horario;
 	private Date data;
 	private boolean aceito;
 	private Integer valor;
+	
 	@ManyToOne
 	@JoinColumn
 	private Localizacao geolocalizacao;

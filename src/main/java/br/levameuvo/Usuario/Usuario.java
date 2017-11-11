@@ -22,11 +22,11 @@ public class Usuario {
 	@JoinColumn
 	private List<Atendimento> agendamentos = new ArrayList<Atendimento>();
 	
-	
 	public Usuario(){
 		this.idUsuario = UUID.randomUUID().toString();
 		
 	}
+	
 	public Usuario(String nome, ArrayList<Atendimento> agendamentos){
 		this();
 		this.nome = nome;

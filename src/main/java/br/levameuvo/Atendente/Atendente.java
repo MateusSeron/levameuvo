@@ -40,7 +40,6 @@ public class Atendente {
 		return nome;
 	}
 
-
 	public String getCpf() {
 		return cpf;
 	}
